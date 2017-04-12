@@ -1,4 +1,4 @@
-module MakeCodes where
+module MakeCode where
 
 import Frequency 
 import Types
