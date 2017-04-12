@@ -19,8 +19,8 @@ alphaMerge ((c1,f1):xs) ((c2,f2):ys)
 freqMerge xs [] = xs
 freqMerge [] ys = ys
 freqMerge ((c1,f1):xs) ((c2,f2):ys)
-  |f1>=f2 = (c1,f1):freqMerge xs ((c2,f2):ys)
-  |f1<f2 = (c2,f2):freqMerge ((c1,f1):xs) ys
+  |f1<=f2 = (c1,f1):freqMerge xs ((c2,f2):ys)
+  |f1>f2 = (c2,f2):freqMerge ((c1,f1):xs) ys
 
 frequency :: [Char] -> [(Char,Int)]
 frequency = mergeSort freqMerge . mergeSort alphaMerge . map (\c->(c,1))

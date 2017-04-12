@@ -6,5 +6,5 @@ type Table = [(Char,HCode)]
 
 data Tree = Node Int Tree Tree|
             Leaf Char Int
-
+            deriving (Show)
 
