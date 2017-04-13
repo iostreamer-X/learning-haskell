@@ -1,5 +1,6 @@
 module Frequency where
 
+-- This is a recurring pattern, I observed this in CodeTable.hs too. "recurse combine recurse"
 mergeSort merge list
   |length list < 2 = list
   |otherwise 
